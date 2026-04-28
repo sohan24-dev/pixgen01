@@ -1,10 +1,10 @@
 import PhotoCard from "./PhotoCard";
 
 
-const TopGeneration = async() => {
-    const res = await fetch('https://pixgen01.vercel.app/data.json')
-    const dataAll =await res.json()
-    const data = dataAll.slice(0,8)
+const TopGeneration = async () => {
+    const res = await fetch('http://localhost:3000/data.json', {cache:"no-store"}) 
+    const dataAll = await res.json()
+    const data = dataAll.slice(0, 8)
     // console.log(data);
     return (
         <div>

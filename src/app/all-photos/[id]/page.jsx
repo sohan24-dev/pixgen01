@@ -5,7 +5,7 @@ import { FaHeart } from "react-icons/fa";
 const PhotoDetailsPage = async ({ params }) => {
     const { id } = await params;
 
-    const res = await fetch('https://pixgen-eta.vercel.app/data.json');
+    const res = await fetch('http://localhost:3000/data.json', {cache:"no-store"}) ;
     const photos = await res.json();
 
     const item = photos.find(p => p.id == id);
